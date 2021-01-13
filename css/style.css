@@ -1,18 +1,71 @@
-.container-1 {
-    width: fit-content;
+.container-1,
+.container-2,
+.container-3,
+.container-4 {
+    width: 75%;
     border: 1px solid #000000;
     margin: 0 auto;
     padding: 10px;
+    text-align: center;
 }
 
-.flex-box-container-1 {
+.flex-box-container-1,
+.flex-box-container-2,
+.flex-box-rps {
     display: flex;
     border: 1px solid #000000;
     padding: 10px;
-    margin-top: 5px;
-
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.flex-box-container-1 button {
-    margin: 0 auto;
+.flex-box-container-1 div {
+    display: flex;
+    border: 1px solid #000000;
+    padding: 10px;
+    align-items: center;
+}
+
+.flex-box-container-2 img {
+    width: 257px;
+    margin: 10px auto;
+    border: 1px solid green;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
+}
+
+.flex-box-rps img:hover {
+    box-shadow: 0px 10px 50px rgba(37, 50, 233, 1);
+}
+
+/* style flex-box-rps-div */
+
+.todo-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-todo-input {
+    width: unset;
+    margin-right: 6px;
+}
+
+.todo-list-container {
+    list-style: none;
+    padding: 0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border: 1px solid;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin: 1rem 25rem;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
