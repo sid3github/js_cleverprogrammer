@@ -80,16 +80,21 @@ function decideWinner(yourChoice, computerChoice) {
 // Simple ToDo List
 
 let todoBtn = document.querySelector('.add-todo-btn');
+let deleteTodoBtn = document.querySelector('.delete-todo-btn');
 let todoListContainer = document.querySelector('.todo-list-container');
 let list;
 let node;
 let todo;
+let time;
 todoBtn.addEventListener('click', function () {
     let todoInput = document.querySelector('.add-todo-input');
     list = document.createElement('li');
     todo = list.classList.add('todo');
     node = document.createTextNode(todoInput.value);
-    list.append(node);
+    list.append(new Date().toLocaleString());
+    let span = document.createElement('span');
+    span.append(node);
+    list.append(span);
     let cancel = document.createElement('button');
     cancel.classList.add('btn');
     cancel.classList.add('btn-primary');
@@ -102,4 +107,8 @@ todoBtn.addEventListener('click', function () {
         this.parentElement.remove();
     });
 
+});
+
+deleteTodoBtn.addEventListener('click', function () {
+    todoListContainer.innerHTML = '';
 });

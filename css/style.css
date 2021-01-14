@@ -69,3 +69,7 @@
     align-items: center;
     margin-bottom: 10px;
 }
+
+.delete-todo-btn {
+    margin-left: 6px;
+}
